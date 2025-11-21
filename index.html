@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Promo - ENI Accueil</title>
+</head>
+<body>
+    <header>
+        <img src="ressources/images/logo.png" alt="Logo de l'ENI Ecole Informatique">
+        <h1>Promo EDWM2510FT</h1>
+        <nav>
+            <a href="index.html" >Accueil</a>
+            <a href="preferences.html" >Préférences</a>
+            <a href="carte.html" >Carte</a>
+            <a href="informations.html" >Informations</a>
+        </nav>
+        <div>
+            <fieldset>
+                <legend>Type d'affichage</legend>
+                <input type="radio" name="displayList" id="displayList" value="displayList" checked>
+                <label for="displayList">Liste</label>
+                <input type="radio" name="displayCards" id="displayCards" value="displayCards">
+                <label for="displayCards">Carte</label>
+            </fieldset>
+        </div>
+    </header>
+    <main>
+        <div>
+            <table>
+                <caption>Liste des apprenants</caption>
+                <thead>
+                    <tr id="enTetesTab">
+                        <th scope="col">Nom</th>
+                        <th scope="col">Prénom</th>
+                        <th scope="col">Ville</th>
+                        <th scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>John</th>
+                        <th>Doe</th>
+                        <th>Narnia</th>
+                        <th>Détail</th>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div>
+            <p>La liste des apprenants sera récupérée depuis un fichier au format JSON. Le nombre d'apprenants affiché sera déterminé par rapport au nombre d'apprenants dans ce fichier.</p>
+        </div>
+    </main>
+    <footer></footer>
+</body>
+</html>
