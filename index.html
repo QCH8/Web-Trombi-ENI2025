@@ -44,14 +44,14 @@
             </div>
         </div>
         <div class="row">
-            <div class="col">
-                    <fieldset>
+            <div class="col text-end">
+                    <fieldset class="d-flex align-items-center gap-3">
                         <legend>Type d'affichage</legend>
-                        <div class="form-check-inline">
+                        <div class="form-check form-check-inline">
                             <input type="radio" name="displayType" id="displayList" value="displayList" class="form-check-input" checked>
                             <label for="displayList" class="form-check-label">Liste</label>
                         </div>
-                        <div class="form-check-inline">
+                        <div class="form-check form-check-inline">
                             <input type="radio" name="displayType" id="displayCards" value="displayCards" class="form-check-input">
                             <label for="displayCards" class="form-check-label">Carte</label>
                         </div>
@@ -59,29 +59,25 @@
             </div>
         </div>
     </header>
-    <main>
-        <div>
-            <table>
-                <caption>Liste des apprenants</caption>
-                <thead>
-                    <tr id="enTetesTab">
-                        <th scope="col">Nom</th>
-                        <th scope="col">Prénom</th>
-                        <th scope="col">Ville</th>
-                        <th scope="col"></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th>John</th>
-                        <th>Doe</th>
-                        <th>Narnia</th>
-                        <th>Détail</th>
-                    </tr>
-                </tbody>
-            </table>
+    <main class="container my-4">
+        <div class="row">
+            <div class="col-12 col-md-8 mb-3 mb-md-0"></div>
+                <table class="table table-primary table-striped-columns text-center">
+                    <caption><em>Liste des apprenants</em></caption>
+                    <thead>
+                        <tr id="enTetesTab">
+                            <th scope="col">Nom</th>
+                            <th scope="col">Prénom</th>
+                            <th scope="col">Ville</th>
+                            <th scope="col">Détails</th>
+                        </tr>
+                    </thead>
+                    <tbody id="bodyTab">
+                        
+                    </tbody>
+                </table>
         </div>
-        <div>
+        <div class="col-12 col-md-4">
             <p>La liste des apprenants sera récupérée depuis un fichier au format JSON. Le nombre d'apprenants affiché sera déterminé par rapport au nombre d'apprenants dans ce fichier.</p>
         </div>
     </main>
@@ -89,5 +85,6 @@
         <div></div>
     </footer>
     <script src="ressources/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="ressources/indexscript.js"></script>
 </body>
 </html>
