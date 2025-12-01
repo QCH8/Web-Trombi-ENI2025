@@ -14,16 +14,17 @@
             <div class="row align-items-center">
                 <!--Logo-->
                 <div class="col-4 col-md-2">
-                    <img src="ressources/images/logo.png" alt="Logo de l'ENI Ecole Informatique" class="img-fluid">
-                </div>
+                    <img src="ressources/images/logo.png" alt="Logo de l'ENI Ecole Informatique" class="img-fluid img-thumbnail">
+                </div> 
 
                 <!--Titre-->
                 <div class="col-8 col-md-6 text-center">
                     <h1>Promo EDWM2510FT</h1>
                 </div>
 
-                <div class="col-12 col-md-4 text-md-end">
-                    <nav class="navbar navbar-expand-md justify-content-md-end">
+                <!--Navbar-->
+                <div class="col-12 col-md-4 d-flex flex-column justify-content-center">
+                    <nav class="navbar navbar-expand-lg mb-3">
                         <div class="container-fluid">
                             <!--Insertion logo navbar et bouton menu burger-->
                             <button type="button" class="navbar-toggler ms-auto" data-bs-toggle="collapse" data-bs-target="#menuNav">
@@ -31,7 +32,7 @@
                             </button>
 
                             <div class="collapse navbar-collapse justify-content-end" id="menuNav">
-                                <ul class="navbar-nav">
+                                <ul class="navbar-nav gap-2">
                                         <li class="nav-item"><a href="index.html" class="nav-link btn btn-primary">Accueil</a></li>
                                         <li class="nav-item"><a href="preferences.html" class="nav-link btn btn-primary">Préférences</a></li>
                                         <li class="nav-item"><a href="carte.html" class="nav-link btn btn-primary">Carte</a></li>
@@ -40,51 +41,62 @@
                             </div>
                         </div>
                     </nav>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col text-end">
                     <fieldset class="d-flex align-items-center gap-3">
                         <legend>Type d'affichage</legend>
                         <div class="form-check form-check-inline">
-                            <input type="radio" name="displayType" id="displayList" value="displayList" class="form-check-input" checked>
+                            <input type="radio" name="displayType" id="displayList" value="list" class="form-check-input">
                             <label for="displayList" class="form-check-label">Liste</label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input type="radio" name="displayType" id="displayCards" value="displayCards" class="form-check-input">
+                            <input type="radio" name="displayType" id="displayCards" value="grid" class="form-check-input">
                             <label for="displayCards" class="form-check-label">Carte</label>
                         </div>
                     </fieldset>
+                </div>
             </div>
         </div>
+        
     </header>
     <main class="container my-4">
+        <div class="row justify-content-center">
+            <h2 class="col col-12 text-center gap-3">Liste des apprenants</h2>
+        </div>
         <div class="row">
-            <div class="col-12 col-md-8 mb-3 mb-md-0"></div>
-                <table class="table table-primary table-striped-columns text-center">
-                    <caption><em>Liste des apprenants</em></caption>
-                    <thead>
-                        <tr id="enTetesTab">
-                            <th scope="col">Nom</th>
-                            <th scope="col">Prénom</th>
-                            <th scope="col">Ville</th>
-                            <th scope="col">Détails</th>
-                        </tr>
-                    </thead>
-                    <tbody id="bodyTab">
-                        
-                    </tbody>
-                </table>
+            <div class="col-12">
+
+                <section id="listPlace">
+                    <div class="table-responsive-lg table-container rounded-4">
+                        <table class="table bordered  border-secondary table-primary   text-center" id="listAppr">
+                            <caption class="hidden"><em>Liste des apprenants</em></caption>
+                            <thead>
+                                <tr id="enTetesTab">
+                                    <th scope="col">Nom</th>
+                                    <th scope="col">Prénom</th>
+                                    <th scope="col">Ville</th>
+                                    <th scope="col">Détails</th>
+                                </tr>
+                            </thead>
+                            <tbody id="bodyTab"></tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <section id="cardsPlace" style="display: none;">
+                    <div id="cardsContainer" class="row gy-3 justify-content-center">
+                    </div>
+                </section>
+            </div>           
         </div>
-        <div class="col-12 col-md-4">
-            <p>La liste des apprenants sera récupérée depuis un fichier au format JSON. Le nombre d'apprenants affiché sera déterminé par rapport au nombre d'apprenants dans ce fichier.</p>
-        </div>
+        <div class="row mt-4">
+            <div class="col-12">
+            <p>La liste des apprenants est récupérée depuis un fichier au format JSON. Le nombre d'apprenants affiché sera déterminé par rapport au nombre d'apprenants dans ce fichier.</p>
+            </div>
+        </div>              
     </main>
-    <footer class="bg-primary-subtle">
-        <div></div>
+    <footer>
+        
     </footer>
     <script src="ressources/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
-    <script src="ressources/indexscript.js"></script>
+    <script type="module" src="js/main-index.js"></script>
 </body>
 </html>

@@ -4,13 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Informations</title>
-
+    <title>Préférences</title>
     <link rel="stylesheet" href="ressources/bootstrap-5.3.8-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="ressources/style.css">
 </head>
 <body>
-    <header class="bg-primary-subtle">
+    <header class="bg-primary-subtle ">
         <div class="container">
             <div class="row align-items-center">
                 <!--Logo-->
@@ -46,52 +45,54 @@
             </div>
         </div>
     </header>
-    <main class="container my-4 custom-main-inf">
-        <div class="row mb-4">
-            <h2 class="col-12 text-center">Informations générales</h2>
-        </div>
-        <div class="row mb-4">
-            <div class="col-12 text-center">
-                <p>Formation du 27/10/2025 au 24/04/2026</p>
-                <p>Nombre d'apprenants : 15</p>
-            </div>
-        </div> 
-        
-        <div class="d-flex justify-content-center flex-wrap row custom-gap ">
-            <div class="col-12 col-md-5 border p-3">
-                <p><strong>Description</strong></p>
-                <div class="">
-                    <p>
-                        Cette formation est financée par France Travail. 
-                        Elle s'adresse à toutes les personnes motivées à apprendre les compétences nécessaires au Développement d'application Web et Web-Mobile.
-                        Elle réunit des candidats de la France entière à l'aide du Campus en ligne proposé par l'ENI.
-                    </p>
-                    <p>
-                        Le saviez-vous ? Ce site a été développé par un apprenant ! 
-                    </p>
-                </div>
-            </div>
-            <div class="col-12 col-md-5 border p-3">
-                <p><strong>Liens Utiles</strong></p>
-                <div class="d-flex flex-column gap-2">
-                    <a href="https://developer.mozilla.org/fr" target="_blank">Developper Mozilla</a>
-                    <a href="https://flexboxfroggy.com/#fr" target="_blank">Comprendre la flexbox avec Froggy</a>
-                    <a href="https://www.w3schools.com" target="_blank">W3Schools</a>
-                    <a href="https://www.ascii-code.com/fr" target="_blank">Ressource code ASCII</a>
-                    <a href="https://flukeout.github.io/#" target="_blank">Comprendre les sélecteurs CSS</a>
-                </div>
-            </div>
-        </div>
-        <div class="row mt-4">
-            <div class="col-12 d-flex justify-content-center">
-                <a href="index.html" class="btn btn-secondary">Retour à la page d'accueil</a>
-            </div>
+    <main class="container my-4">
+        <div class="container text-center">
+            <h2>Préférences du site</h2>
         </div>
         
+        <!--Thème clair ou sombre-->
+        <div class="row justify-content-center mb-3 align-items-center">
+                <div class="col-3">
+                    <label class="col-form-label" for="choice">Thème du site</label>
+                </div>
+                <div class="col-auto">
+                    <select class="form-select" id="choice" name="choice">
+                        <option value="option1">Clair</option>
+                        <option value="option2">Sombre</option>
+                    </select>
+                </div>
+        </div>
 
+        <!--Format d'affichage liste ou cartes-->
+        <div class="row justify-content-center mb-3">
+            <div class="col-3 d-flex align-items-start">
+                <label for="prefDisplay" class="col-form-label">
+                    Format d'affichage de la liste des apprenants
+                </label>
+            </div>
+            <div class="col-auto">
+                <fieldset id="prefDisplay">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="prefDisplay" id="Liste" value="list">
+                        <label class="form-check-label" for="Liste">Liste (Table)</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="prefDisplay" id="Grid" value="grid">
+                        <label class="form-check-label" for="Grid">Cartes (Grid)</label>    
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-auto">
+                <a href="index.html" class="btn btn-secondary me-2">Retour à la page d'Accueil</a>
+                <button type="button" id="saveLocalStorage" class="btn btn-primary">Enregistrer</button> <!--Doit stocker dans le local storage-->
+            </div>
+        </div>
+        
     </main>
     <footer></footer>
     <script src="ressources/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
-    <script type="module" src="js/main-info.js"></script>
+    <script type="module" src="js/main-prefs.js"></script>
 </body>
 </html>
